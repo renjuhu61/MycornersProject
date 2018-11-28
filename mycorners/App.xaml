@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="mycorners.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Set up ThemeMaster -->
+            <ControlTemplate x:Key="ThemeMaster">
+                <StackLayout>
+                    <BoxView BackgroundColor="Purple"  HeightRequest="80"
+                     VerticalOptions="Start">
+            
+                    </BoxView>
+                    <ContentPresenter BackgroundColor="#F2F3F4" VerticalOptions="FillAndExpand"></ContentPresenter>
+           
+                    <BoxView BackgroundColor="White" WidthRequest="1" HeightRequest="80" 
+                     VerticalOptions="End">
+                
+                    </BoxView>
+                </StackLayout>       
+            </ControlTemplate>
+            <!--End of ThemeMaster -->
+            
+            <!--Set up MainPageTemplate -->
+            <ControlTemplate x:Key="MainPageTemplate">
+                <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                      ColumnSpacing="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="8*" />
+                    </Grid.RowDefinitions>
+                    
+                    <!--Begin Header -->
+                <StackLayout
+                        Orientation="Vertical"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Spacing="0"
+                        BackgroundColor="{StaticResource primaryColor}"
+                        HeightRequest="100"
+                        Grid.Column="0" Grid.Row="0">
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness"
+                                    iOS="0, 35, 0, 0"
+                                    Android="10, 5, 10, 10"
+                                    WinPhone="10, 10, 10, 10" />
+                    </StackLayout.Padding>
+                    <Label Text="My Corner" Style="{StaticResource lblBanner}"></Label>
+                    <!--Image Source="backarrow_1x.png" WidthRequest="30" HeightRequest="30">
+                        
+                        
+                    </Image-->
+                </StackLayout>
+                <!--End Header -->
+               
+                <!--Begin Content -->
+                 <ScrollView Grid.Column="0" Grid.Row="1">
+                    <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                </ScrollView>
+                <!--End Content -->
+                    
+                </Grid>
+                
+               
+                
+            </ControlTemplate>
+            <!--End of MainPageTemplate -->
+            
+            <!--Set up BoxView for ThemeMaster-->
+            <!--<Style x:Key="BoxViewBanner" TargetType="BoxView">
+                <Setter Property="HeightRequest" >
+                    <Setter.Value>
+                        
+                    </Setter.Value>
+                </Setter>
+                
+            </Style>-->
+            <!--End of Set up BoxView for ThemeMaster -->
+            
+            <!--Set up Label for Title in each page-->
+            <Style x:Key="lblTitle" TargetType="Label">
+                <!--Setter Property="FontSize" Value="20"></Setter-->
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Margin" Value="5,5,5,5"></Setter>
+                <Setter Property="Font">
+                    <Setter.Value>
+                        <OnIdiom x:TypeArguments="Font">
+                            <OnIdiom.Phone>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Phone>
+                            <OnIdiom.Tablet>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Tablet>
+                        </OnIdiom>
+                    </Setter.Value>
+                </Setter>
+                
+            </Style>
+            <!--End of Set up Label for Title in each page -->
+            
+            <!--Set up Label for Banner in each page-->
+            <Style x:Key="lblBanner" TargetType="Label">
+                <!--Setter Property="FontSize" Value="20"></Setter-->
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+               
+                <Setter Property="Font">
+                    <Setter.Value>
+                        <OnIdiom x:TypeArguments="Font">
+                            <OnIdiom.Phone>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Phone>
+                            <OnIdiom.Tablet>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Tablet>
+                        </OnIdiom>
+                    </Setter.Value>
+                </Setter>
+                
+            </Style>
+            <!--End of Set up Label for Title in each page -->
+            
+            <!--Set up Label for General use-->
+            <Style TargetType="Label">
+                <!--Setter Property="FontSize" Value="14"></Setter-->
+                <!--Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter-->
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Margin" Value="5,5,5,5"></Setter>
+                <Setter Property="Font">
+                    <Setter.Value>
+                        <OnIdiom x:TypeArguments="Font">
+                            <OnIdiom.Phone>
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                            </OnIdiom.Phone>
+                            <OnIdiom.Tablet>
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                            </OnIdiom.Tablet>
+                        </OnIdiom>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--End of Set up Label for General use -->
+            
+            <!--Set up Entry for General use-->
+            <Style TargetType="Entry">
+                <!--Setter Property="FontSize" Value="14"></Setter-->
+                <!--Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter-->
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Margin" Value="5,5,5,5"></Setter>
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnIdiom x:TypeArguments="Font">
+                            <OnIdiom.Phone>
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                            </OnIdiom.Phone>
+                            <OnIdiom.Tablet>
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                            </OnIdiom.Tablet>
+                        </OnIdiom>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <!--End of Set up Entry for General use -->
+            
+            <!--Set up StatusBar Theme-->
+            
+                   
+            <!-- End of Status Bar Theme -->
+            
+            <!-- Set up Color Theme -->
+            <Color x:Key="primaryColor">#c5e1a5</Color>
+            <Color x:Key="primaryLightColor">#f8ffd7</Color>
+            <Color x:Key="primaryDarkColor">#94af76</Color>
+            <Color x:Key="secondaryColor">#e1bee7</Color>
+            <Color x:Key="secondaryLightColor">#fff1ff</Color>
+            <Color x:Key="secondaryDarkColor">#af8eb5</Color>
+            <Color x:Key="primaryTextColor">#000000</Color>
+            <Color x:Key="secondaryTextColor">#000000</Color>
+            <!-- End of Color Theme -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

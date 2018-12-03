@@ -52,9 +52,11 @@
                 <!--End Header -->
                
                 <!--Begin Content -->
-                 <ScrollView Grid.Column="0" Grid.Row="1">
+                 <!--ScrollView Grid.Column="0" Grid.Row="1"-->
+                 <StackLayout Grid.Column="0" Grid.Row="1">
                     <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
-                </ScrollView>
+                 </StackLayout>
+                        <!--/ScrollView-->
                 <!--End Content -->
                     
                 </Grid>
@@ -152,6 +154,7 @@
                 <Setter Property="TextColor" Value="Black"></Setter>
                 <Setter Property="Margin" Value="5,5,5,5"></Setter>
                 <Setter Property="FontSize">
+                
                     <Setter.Value>
                         <OnIdiom x:TypeArguments="Font">
                             <OnIdiom.Phone>

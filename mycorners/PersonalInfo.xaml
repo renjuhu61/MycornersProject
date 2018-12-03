@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="mycorners.PersonalInfo" 
+             xmlns:custom="clr-namespace:mycorners.CustomControls;assembly=mycorners"
              Title="Personal Info" Icon="baseline_account_2x.png">
         <ContentPage.Content>
         <StackLayout>
@@ -13,23 +14,27 @@
                     <ColumnDefinition Width="70*" />
              </Grid.ColumnDefinitions>
              <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5*" />
              </Grid.RowDefinitions>
              <Label Grid.Row="0" Grid.Column="0"  Text="Email:"/>
              <Label Grid.Row="1" Grid.Column="0"  Text="Password:" />
              <Label Grid.Row="2" Grid.Column="0"  Text="Last Name:" />
              <Label Grid.Row="3" Grid.Column="0"  Text="First Name:" />
              <Label Grid.Row="4" Grid.Column="0"  Text="Cell Phone:" />
-             <Entry Grid.Row="0" Grid.Column="1" ></Entry>
-             <Entry Grid.Row="1" Grid.Column="1"></Entry>
-             <Entry Grid.Row="2" Grid.Column="1"></Entry>
-             <Entry Grid.Row="3" Grid.Column="1"></Entry>
-             <Entry Grid.Row="4" Grid.Column="1" 
-                    Placeholder="xxx-xxx-xxxx" PlaceholderColor="Silver"></Entry>
+             <Label Grid.Row="5" Grid.Column="0" Text="" />
+             <custom:CustomEntry Grid.Row="0" Grid.Column="1" />
+             <custom:CustomEntry Grid.Row="1" Grid.Column="1" />
+             <custom:CustomEntry Grid.Row="2" Grid.Column="1" />
+             <custom:CustomEntry Grid.Row="3" Grid.Column="1" />
+             <custom:CustomEntry Grid.Row="4" Grid.Column="1" 
+                    Placeholder="xxx-xxx-xxxx" PlaceholderColor="Silver" />
+             <Label Grid.Row="5" Grid.Column="1" Text="" />
+                
         </Grid>
         </StackLayout>
     </ContentPage.Content>

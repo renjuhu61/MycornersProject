@@ -21,4 +21,7 @@
     <Compile Remove="TestTheme.xaml.cs" />
     <Compile Remove="TestBanner.xaml.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomControls\" />
+  </ItemGroup>
 </Project>

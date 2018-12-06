@@ -22,34 +22,11 @@ namespace mycorners.Droid
         {
             base.OnElementChanged(e);
 
-            //if (Control != null)
-            //{
-              //  Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
-              //  var nativeEditText = (global::Android.Widget.EditText)Control;
-              //  var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
-              //  //shape.Paint.Color = Xamarin.Forms.Color.Red.ToAndroid();
-                //shape.Paint.SetStyle(Paint.Style.Stroke);
-              //  nativeEditText.Background = shape;
-
-            //}
-
-            //if (Control != null)
-           // {
-             //   GradientDrawable gd = new GradientDrawable();
-
-                //this line sets the bordercolor
-              //  gd.SetColor(global::Android.Graphics.Color.Red);
-
-                //this.Control.SetBackgroundDrawable(gd);
-               // this.Control.SetRawInputType(InputTypes.TextFlagNoSuggestions);
-               // Control.SetHintTextColor(ColorStateList.ValueOf(global::Android.Graphics.Color.White));
-            //}
-
-            base.OnElementChanged(e);
             if (e.OldElement == null)
             {
                 var nativeEditText = (global::Android.Widget.EditText)Control;
                 var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
+
                 shape.Paint.Color = Xamarin.Forms.Color.DarkGray.ToAndroid();
 
                 shape.Paint.SetStyle(Paint.Style.Stroke);

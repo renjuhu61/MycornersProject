@@ -6,7 +6,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:local="clr-namespace:mycorners" >
     
-          <local:CornerHome></local:CornerHome>
+          <local:SellerHome></local:SellerHome>
           <local:PersonalInfo></local:PersonalInfo>
            
     

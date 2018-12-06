@@ -52,11 +52,11 @@
                 <!--End Header -->
                
                 <!--Begin Content -->
-                 <!--ScrollView Grid.Column="0" Grid.Row="1"-->
+                 <ScrollView Grid.Column="0" Grid.Row="1">
                  <StackLayout Grid.Column="0" Grid.Row="1">
                     <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
                  </StackLayout>
-                        <!--/ScrollView-->
+                        </ScrollView>
                 <!--End Content -->
                     
                 </Grid>
@@ -100,9 +100,31 @@
             </Style>
             <!--End of Set up Label for Title in each page -->
             
+             <!--Set up Label for Title in each page-->
+            <Style x:Key="lblLeftTitle" TargetType="Label">
+                <!--Setter Property="FontSize" Value="20"></Setter-->
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HorizontalOptions" Value="Start"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Margin" Value="5,5,5,5"></Setter>
+                <Setter Property="Font">
+                    <Setter.Value>
+                        <OnIdiom x:TypeArguments="Font">
+                            <OnIdiom.Phone>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Phone>
+                            <OnIdiom.Tablet>
+                                <OnPlatform x:TypeArguments="Font" iOS="20" Android="12"  />
+                            </OnIdiom.Tablet>
+                        </OnIdiom>
+                    </Setter.Value>
+                </Setter>
+                
+            </Style>
+            <!--End of Set up Label for Title in each page -->
+            
             <!--Set up Label for Banner in each page-->
             <Style x:Key="lblBanner" TargetType="Label">
-                <!--Setter Property="FontSize" Value="20"></Setter-->
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="VerticalOptions" Value="Center"></Setter>
@@ -130,15 +152,15 @@
                 <!--Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter-->
                 <Setter Property="VerticalOptions" Value="Center"></Setter>
                 <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="Margin" Value="5,5,5,5"></Setter>
-                <Setter Property="Font">
+                <Setter Property="Margin" Value="5,0,0,0"></Setter>
+                <Setter Property="Font" >
                     <Setter.Value>
                         <OnIdiom x:TypeArguments="Font">
                             <OnIdiom.Phone>
-                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="9"  />
                             </OnIdiom.Phone>
                             <OnIdiom.Tablet>
-                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
+                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="9"  />
                             </OnIdiom.Tablet>
                         </OnIdiom>
                     </Setter.Value>
@@ -146,29 +168,53 @@
             </Style>
             <!--End of Set up Label for General use -->
             
+            <!--Set up Entry Font Size to distinguish the size between Android and iOS -->
+            <OnPlatform x:Key="EntryFontSize" x:TypeArguments="x:Double"
+                        iOS="14.0" Android="9.0" WinPhone="14.0" />
+            <!--End of Entry Font Size -->
+            
             <!--Set up Entry for General use-->
             <Style TargetType="Entry">
                 <!--Setter Property="FontSize" Value="14"></Setter-->
                 <!--Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter-->
                 <Setter Property="VerticalOptions" Value="Center"></Setter>
                 <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="Margin" Value="5,5,5,5"></Setter>
-                <Setter Property="FontSize">
+                <Setter Property="Margin" Value="0,0,10,0"></Setter>
+                <Setter Property="FontSize" Value="{DynamicResource EntryFontSize}">
+
+                </Setter>
                 
-                    <Setter.Value>
-                        <OnIdiom x:TypeArguments="Font">
-                            <OnIdiom.Phone>
-                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
-                            </OnIdiom.Phone>
-                            <OnIdiom.Tablet>
-                                <OnPlatform x:TypeArguments="Font" iOS="14" Android="8"  />
-                            </OnIdiom.Tablet>
-                        </OnIdiom>
-                    </Setter.Value>
+                <Setter Property="WidthRequest">
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <On Platform="iOS">40</On>
+                      <On Platform="Android,Windows">30</On>
+                    </OnPlatform>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <On Platform="iOS">40</On>
+                      <On Platform="Android,Windows">30</On>
+                    </OnPlatform>
                 </Setter>
             </Style>
-            
+           
             <!--End of Set up Entry for General use -->
+            
+            <!--Set up Button Style -->
+            <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="Margin" Value="5,5,5,5"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="FontSize" Value="{DynamicResource EntryFontSize}" />
+                <Setter Property="HeightRequest">
+                    <OnPlatform x:TypeArguments="x:Double">
+                      <On Platform="iOS">40</On>
+                      <On Platform="Android,Windows">30</On>
+                    </OnPlatform>
+                </Setter>
+                <Setter Property="FontSize" Value="{DynamicResource EntryFontSize}" />
+            </Style>
+            <!--End of Button Style -->
             
             <!--Set up StatusBar Theme-->
             

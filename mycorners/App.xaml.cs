@@ -14,6 +14,7 @@ namespace mycorners
             //MainPage = new MainPage();
             //MainPage = new EditPersonInfo();
             MainPage = new MainTabbedPage();
+            //MainPage = new TestGrid();
 
             //MainPage = new NavigationPage(new MainTabbedPage())
             //{

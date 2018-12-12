@@ -23,6 +23,7 @@
     <Compile Remove="TestBanner.xaml.cs" />
     <Compile Remove="TestGrid.xaml.cs" />
     <Compile Remove="CornerHome.xaml.cs" />
+    <Compile Remove="ENums\EnumCategory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomControls\" />

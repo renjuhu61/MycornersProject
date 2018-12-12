@@ -29,7 +29,7 @@ namespace mycorners.TestData
             seller1.city = "Rockville";
             seller1.state = "MD";
             seller1.zip_code = "20850";
-            seller1.phone_number = "301-222-2222";
+            seller1.cell_phone_number = "301-222-2222";
             seller1.payment_method = "Cash, paypal and credit card are allowed.";
             seller1.order_by_app = true;
             seller1.wechat_id = "djflskd";
@@ -54,7 +54,7 @@ namespace mycorners.TestData
             seller2.city = "Palm Spring";
             seller2.state = "CA";
             seller2.zip_code = "91111";
-            seller2.phone_number = "310-233-3333";
+            seller2.cell_phone_number = "310-233-3333";
             seller2.payment_method = "Cash only.";
             seller2.order_by_app = true;
             seller2.wechat_id = "safaljfdadf";

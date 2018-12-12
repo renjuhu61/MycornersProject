@@ -23,7 +23,13 @@ namespace mycorners
             if (seller.store_name != null)
                 lblStoreName.Text = seller.store_name; 
             if (seller.category != null)
-                lblCategory.Text = seller.category;
+            {
+                CategoryKeyValue category = new CategoryKeyValue();
+                if (category.categories.ContainsKey(seller.category))
+                    lblCategory.Text = category.categories[seller.category];
+
+            }
+
             if (seller.description != null)
                 lblDescription.Text = seller.description;
 

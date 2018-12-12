@@ -48,24 +48,25 @@
              <Label Grid.Row="11" Grid.Column="0"  Text="State 2:" />   
              <Label Grid.Row="12" Grid.Column="0"  Text="Zip Code 2:" />  
                 
-             <Entry Grid.Row="0" Grid.Column="1" />
-             <Entry Grid.Row="1" Grid.Column="1" />
-             <Entry Grid.Row="2" Grid.Column="1" />
-             <Entry Grid.Row="3" Grid.Column="1" />
+             <Entry Grid.Row="0" Grid.Column="1" x:Name="entryEmail" />
+             <Entry Grid.Row="1" Grid.Column="1" x:Name="entryPwd"/>
+             <Entry Grid.Row="2" Grid.Column="1" x:Name="entryLName"/>
+             <Entry Grid.Row="3" Grid.Column="1" x:Name="entryFName"/>
              <Entry Grid.Row="4" Grid.Column="1" 
-                    Placeholder="xxx-xxx-xxxx" PlaceholderColor="Silver" />
-             <Entry Grid.Row="5" Grid.Column="1" />
-             <Entry Grid.Row="6" Grid.Column="1" />
-             <Entry Grid.Row="7" Grid.Column="1" />
-             <Entry Grid.Row="8" Grid.Column="1" />
-             <Entry Grid.Row="9" Grid.Column="1" />
-             <Entry Grid.Row="10" Grid.Column="1" />
-             <Entry Grid.Row="11" Grid.Column="1" />
-             <Entry Grid.Row="12" Grid.Column="1" />
+                    Placeholder="xxx-xxx-xxxx" PlaceholderColor="Silver" x:Name="entryPhone"/>
+             <Entry Grid.Row="5" Grid.Column="1" x:Name="entryAddr"/>
+             <Entry Grid.Row="6" Grid.Column="1" x:Name="entryCity"/>
+             <Entry Grid.Row="7" Grid.Column="1" x:Name="entryState"/>
+             <Entry Grid.Row="8" Grid.Column="1" x:Name="entryZip"/>
+             <Entry Grid.Row="9" Grid.Column="1" x:Name="entryAddr2"/>
+             <Entry Grid.Row="10" Grid.Column="1" x:Name="entryCity2"/>
+             <Entry Grid.Row="11" Grid.Column="1" x:Name="entryState2"/>
+             <Entry Grid.Row="12" Grid.Column="1" x:Name="entryZip2"/>
              
         </Grid>
             <Button Text="Update" Margin="10, 10, 10, 10"
                     BackgroundColor="{StaticResource primaryLightColor}"
+                    Clicked="Handle_Clicked"
                     >
             </Button>
         </StackLayout>
